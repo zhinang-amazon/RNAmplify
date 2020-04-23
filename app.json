@@ -1,0 +1,17 @@
+{
+  "name": "RNAmplify",
+  "displayName": "RNAmplify",
+  "expo": {
+    "name": "RNAmplify",
+    "slug": "RNAmplify",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
