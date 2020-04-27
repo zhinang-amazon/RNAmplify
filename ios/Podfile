@@ -43,4 +43,6 @@ target 'RNAmplify' do
 
   # react-native-cli autolinking
   use_native_modules!
+  pod 'RNCPushNotificationIOS', :path => '../node_modules/@react-native-community/push-notification-ios'
+
 end

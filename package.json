@@ -8,15 +8,22 @@
     "test": "jest"
   },
   "dependencies": {
+    "@aws-amplify/pushnotification": "^3.0.8",
+    "@react-native-community/netinfo": "^5.8.0",
+    "@react-native-community/push-notification-ios": "^1.1.1",
+    "amazon-cognito-identity-js": "^4.2.1",
+    "aws-amplify": "^3.0.8",
+    "aws-amplify-react-native": "^4.0.4",
     "expo": "~37.0.3",
     "expo-updates": "~0.1.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-native": "~0.61.5",
+    "react-native": "^0.61.5",
     "react-native-gesture-handler": "~1.6.0",
     "react-native-reanimated": "~1.7.0",
     "react-native-screens": "~2.2.0",
     "react-native-unimodules": "~0.9.0",
+    "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {
