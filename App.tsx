@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, ScrollView, Text, View} from 'react-native';
+import {StyleSheet, ScrollView, Text, View, Button} from 'react-native';
 
 import Amplify, { Auth, Analytics } from 'aws-amplify';
 import PushNotification from '@aws-amplify/pushnotification';
@@ -17,6 +17,7 @@ export default class App extends React.Component {
       status: 'status',
         data: 'data'
     };
+    this.onPressEventTrigger = this.onPressEventTrigger.bind(this);
   }
 
   componentDidMount(): void {
@@ -57,14 +58,25 @@ export default class App extends React.Component {
       Amplify.Logger.LOG_LEVEL = 'DEBUG'
   }
 
-    render() {
+  onPressEventTrigger() {
+      Analytics.record({ name: 'campaignTrigger' });
+      this.setState({status: 'Sent Event Trigger: ',
+          data: 'campaignTrigger'
+      });
+  }
+
+  render() {
     return (
         <View style={{flex: 1, paddingTop: 44}}>
             <ScrollView contentContainerStyle={styles.container}>
               <Text>{this.state.status}</Text>
-              <View>
                 <Text> {this.state.data}</Text>
-              </View>
+                <Button
+                    onPress={this.onPressEventTrigger}
+                    title="Send event: campaignTrigger"
+                    color="#841584"
+                    accessibilityLabel="Send event: campaignTrigger"
+                />
             </ScrollView>
         </View>
     );
